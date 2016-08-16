@@ -1,6 +1,6 @@
 angular.module('app.routes', ['ionicUIRouter'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -23,12 +23,12 @@ angular.module('app.routes', ['ionicUIRouter'])
       /page1/tab1/home
       /page1/tab2/home
   */
-  .state('tabsController.lILT', {
+  .state('home', {
     url: '/home',
     views: {
       'tab1': {
         templateUrl: 'templates/lILT.html',
-        controller: 'lILTCtrl'
+        controller: 'AuthController'
       },
       'tab2': {
         templateUrl: 'templates/lILT.html',
@@ -37,7 +37,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('tabsController.lILTStory', {
+  .state('camera', {
     url: '/camera',
     views: {
       'tab2': {
@@ -77,10 +77,11 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('startPage', {
-    url: '/register',
+  .state('login', {
+    url: '/login',
     templateUrl: 'templates/startPage.html',
-    controller: 'startPageCtrl'
+    controller: 'AuthController',
+    controllerAs: 'vm'
   })
 
   .state('tabsController', {
@@ -90,9 +91,10 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
   .state('register', {
-    url: '/page9',
+    url: '/register',
     templateUrl: 'templates/register.html',
-    controller: 'registerCtrl'
+    controller: 'AuthController',
+    controllerAs: 'vm'
   })
 
   .state('tabsController.singleStory', {
@@ -135,7 +137,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-$urlRouterProvider.otherwise('/register')
+$urlRouterProvider.otherwise('/login')
 
   
 
