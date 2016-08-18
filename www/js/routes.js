@@ -6,9 +6,9 @@ angular.module('app.routes', ['ionicUIRouter'])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
+  $urlRouterProvider.otherwise('/login')
+
   $stateProvider
-    
-  
 
       /* 
     The IonicUIRouter.js UI-Router Modification is being used for this route.
@@ -23,12 +23,12 @@ angular.module('app.routes', ['ionicUIRouter'])
       /page1/tab1/home
       /page1/tab2/home
   */
-  .state('home', {
+  .state('tabsController.lILT', {
     url: '/home',
     views: {
       'tab1': {
         templateUrl: 'templates/lILT.html',
-        controller: 'AuthController'
+        controller: 'lILTCtrl'
       },
       'tab2': {
         templateUrl: 'templates/lILT.html',
@@ -37,7 +37,8 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('camera', {
+
+.state('tabsController.lILTStory', {
     url: '/camera',
     views: {
       'tab2': {
@@ -46,6 +47,7 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
+
 
   .state('tabsController.cOMMUNITY', {
     url: '/search',
@@ -137,7 +139,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-$urlRouterProvider.otherwise('/login')
+
 
   
 

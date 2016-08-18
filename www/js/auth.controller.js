@@ -57,7 +57,7 @@
                     vm.loginEmail = '';
                     vm.loginPassword = '';
 
-                    $state.go("camera");
+                    $state.go("tabsController.pROFILE");
                 },
                 function(error) {
                     if (typeof error === 'object') {

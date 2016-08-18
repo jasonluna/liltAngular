@@ -29,7 +29,7 @@
 
             $http({
                 method: 'POST',
-                url: 'http://localhost:3000/api/register',
+                url: 'https://liltfinalproject.herokuapp.com/api/register',
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 },
@@ -55,7 +55,7 @@
 
             $http({
                 method: 'POST',
-                url: 'http://localhost:3000/api/authenticate',
+                url: 'https://liltfinalproject.herokuapp.com/api/authenticate',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 },
